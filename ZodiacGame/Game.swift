@@ -136,7 +136,6 @@ class Game {
             let zodiacYear = findZodiac(year: Year)
             print ("Your Chinese zodiac is \(zodiacYear).")
         }
-        print("Good-Bye!")
     }
 }
 
