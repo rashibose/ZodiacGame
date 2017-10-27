@@ -13,6 +13,9 @@
 		40755A3C1F86E76000C9E59F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40755A3B1F86E76000C9E59F /* Assets.xcassets */; };
 		40755A3F1F86E76000C9E59F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40755A3D1F86E76000C9E59F /* LaunchScreen.storyboard */; };
 		40755A471F86E7F300C9E59F /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40755A461F86E7F300C9E59F /* Game.swift */; };
+		40755A6D1F97F33100C9E59F /* BirthdayDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40755A6C1F97F33100C9E59F /* BirthdayDisplayViewController.swift */; };
+		40755A6F1F97F35A00C9E59F /* ZodiacDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40755A6E1F97F35A00C9E59F /* ZodiacDisplayViewController.swift */; };
+		40755A8F1FA12DC300C9E59F /* EnterBirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40755A8E1FA12DC300C9E59F /* EnterBirthdayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		40755A3E1F86E76000C9E59F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40755A401F86E76000C9E59F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40755A461F86E7F300C9E59F /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		40755A6C1F97F33100C9E59F /* BirthdayDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayDisplayViewController.swift; sourceTree = "<group>"; };
+		40755A6E1F97F35A00C9E59F /* ZodiacDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZodiacDisplayViewController.swift; sourceTree = "<group>"; };
+		40755A8E1FA12DC300C9E59F /* EnterBirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterBirthdayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +65,10 @@
 				40755A341F86E76000C9E59F /* AppDelegate.swift */,
 				40755A361F86E76000C9E59F /* ViewController.swift */,
 				40755A461F86E7F300C9E59F /* Game.swift */,
+				40755A6C1F97F33100C9E59F /* BirthdayDisplayViewController.swift */,
+				40755A6E1F97F35A00C9E59F /* ZodiacDisplayViewController.swift */,
 				40755A381F86E76000C9E59F /* Main.storyboard */,
+				40755A8E1FA12DC300C9E59F /* EnterBirthdayViewController.swift */,
 				40755A3B1F86E76000C9E59F /* Assets.xcassets */,
 				40755A3D1F86E76000C9E59F /* LaunchScreen.storyboard */,
 				40755A401F86E76000C9E59F /* Info.plist */,
@@ -139,8 +148,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40755A8F1FA12DC300C9E59F /* EnterBirthdayViewController.swift in Sources */,
 				40755A371F86E76000C9E59F /* ViewController.swift in Sources */,
 				40755A471F86E7F300C9E59F /* Game.swift in Sources */,
+				40755A6D1F97F33100C9E59F /* BirthdayDisplayViewController.swift in Sources */,
+				40755A6F1F97F35A00C9E59F /* ZodiacDisplayViewController.swift in Sources */,
 				40755A351F86E76000C9E59F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
