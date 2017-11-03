@@ -29,9 +29,11 @@ class EnterBirthdayViewController: UIViewController, UIPickerViewDelegate, UIPic
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if component == 0{
-            return game.months.count
+            print (12)
+            return 12
         }else{
-            return game.days.count
+            print (31)
+            return 31
         }
     }
     func pickerView(_pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?{

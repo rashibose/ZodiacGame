@@ -1,18 +1,15 @@
 //
-//  ZodiacDisplayViewController.swift
+//  EnterZodiacViewController.swift
 //  ZodiacGame
 //
-//  Created by Rashi Bose on 10/18/17.
+//  Created by Rashi Bose on 11/2/17.
 //  Copyright © 2017 Rashi Bose. All rights reserved.
 //
 
 import UIKit
 
-class ZodiacDisplayViewController: UIViewController {
+class EnterZodiacViewController: UIViewController {
 
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

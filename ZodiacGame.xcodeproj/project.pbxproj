@@ -16,6 +16,7 @@
 		40755A6D1F97F33100C9E59F /* BirthdayDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40755A6C1F97F33100C9E59F /* BirthdayDisplayViewController.swift */; };
 		40755A6F1F97F35A00C9E59F /* ZodiacDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40755A6E1F97F35A00C9E59F /* ZodiacDisplayViewController.swift */; };
 		40755A8F1FA12DC300C9E59F /* EnterBirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40755A8E1FA12DC300C9E59F /* EnterBirthdayViewController.swift */; };
+		40F93F771FAB8F9700569C59 /* EnterZodiacViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F93F761FAB8F9700569C59 /* EnterZodiacViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		40755A6C1F97F33100C9E59F /* BirthdayDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayDisplayViewController.swift; sourceTree = "<group>"; };
 		40755A6E1F97F35A00C9E59F /* ZodiacDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZodiacDisplayViewController.swift; sourceTree = "<group>"; };
 		40755A8E1FA12DC300C9E59F /* EnterBirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterBirthdayViewController.swift; sourceTree = "<group>"; };
+		40F93F761FAB8F9700569C59 /* EnterZodiacViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterZodiacViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				40755A6C1F97F33100C9E59F /* BirthdayDisplayViewController.swift */,
 				40755A6E1F97F35A00C9E59F /* ZodiacDisplayViewController.swift */,
 				40755A381F86E76000C9E59F /* Main.storyboard */,
+				40F93F761FAB8F9700569C59 /* EnterZodiacViewController.swift */,
 				40755A8E1FA12DC300C9E59F /* EnterBirthdayViewController.swift */,
 				40755A3B1F86E76000C9E59F /* Assets.xcassets */,
 				40755A3D1F86E76000C9E59F /* LaunchScreen.storyboard */,
@@ -151,6 +154,7 @@
 				40755A8F1FA12DC300C9E59F /* EnterBirthdayViewController.swift in Sources */,
 				40755A371F86E76000C9E59F /* ViewController.swift in Sources */,
 				40755A471F86E7F300C9E59F /* Game.swift in Sources */,
+				40F93F771FAB8F9700569C59 /* EnterZodiacViewController.swift in Sources */,
 				40755A6D1F97F33100C9E59F /* BirthdayDisplayViewController.swift in Sources */,
 				40755A6F1F97F35A00C9E59F /* ZodiacDisplayViewController.swift in Sources */,
 				40755A351F86E76000C9E59F /* AppDelegate.swift in Sources */,
@@ -291,7 +295,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K9B8DVHXXS;
 				INFOPLIST_FILE = ZodiacGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Bose.ZodiacGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -305,7 +311,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K9B8DVHXXS;
 				INFOPLIST_FILE = ZodiacGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Bose.ZodiacGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
