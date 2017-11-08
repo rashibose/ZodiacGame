@@ -11,11 +11,12 @@ import UIKit
 class ZodiacDisplayViewController: UIViewController {
 
     
-    
+    @IBOutlet weak var zodiacDisplayLabel: UILabel!
+    var zodiacString = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        zodiacDisplayLabel.text = zodiacString
         // Do any additional setup after loading the view.
     }
 

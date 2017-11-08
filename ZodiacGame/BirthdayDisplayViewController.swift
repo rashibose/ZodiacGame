@@ -10,9 +10,11 @@ import UIKit
 
 class BirthdayDisplayViewController: UIViewController {
 
+    @IBOutlet weak var birthdayDisplayLabel: UILabel!
+    var birthdayString = "Something is very wrong."
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        birthdayDisplayLabel.text = birthdayString
         // Do any additional setup after loading the view.
     }
 

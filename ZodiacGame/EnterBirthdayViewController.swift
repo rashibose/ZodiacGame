@@ -30,19 +30,44 @@ class EnterBirthdayViewController: UIViewController, UIPickerViewDelegate, UIPic
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if component == 0{
             print (12)
-            return 12
+            return game.months.count
         }else{
             print (31)
-            return 31
+            return game.days.count
         }
     }
-    func pickerView(_pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?{
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing reusingView: UIView?) -> UIView {
+        print("[viewForRow]")
         if component == 0{
-            return game.months[row]
-        }else{
-            return game.days[row]
+            let pickerLabel = UILabel()
+            pickerLabel.text = game.months[row]
+            pickerLabel.textAlignment = NSTextAlignment.left
+            return pickerLabel
+        }else {
+            let pickerLabel1 = UILabel()
+            pickerLabel1.text = game.days[row]
+            pickerLabel1.textAlignment = NSTextAlignment.center
+            return pickerLabel1
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let helloController = segue.destination as? BirthdayDisplayViewController {
+            let monthValue = dayMonthPicker.selectedRow(inComponent: 0) + 1
+            let dayValue = dayMonthPicker.selectedRow(inComponent: 1) + 1
+            helloController.birthdayString = game.findDay(month: monthValue, date: dayValue)
+    }
+    }
+
+    
+//    func pickerView(_pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?{
+//        if component == 0{
+//            return game.months[row]
+//        }else{
+//            return game.days[row]
+//        }
+//    }
     
     //override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
