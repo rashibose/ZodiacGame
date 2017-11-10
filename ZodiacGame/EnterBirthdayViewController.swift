@@ -24,16 +24,18 @@ class EnterBirthdayViewController: UIViewController, UIPickerViewDelegate, UIPic
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 2
+        return 3
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if component == 0{
             print (12)
             return game.months.count
-        }else{
+        }else if component == 1{
             print (31)
             return game.days.count
+        }else{
+            return game.years1.count
         }
     }
     
@@ -44,11 +46,16 @@ class EnterBirthdayViewController: UIViewController, UIPickerViewDelegate, UIPic
             pickerLabel.text = game.months[row]
             pickerLabel.textAlignment = NSTextAlignment.left
             return pickerLabel
-        }else {
+        }else if component == 1{
             let pickerLabel1 = UILabel()
             pickerLabel1.text = game.days[row]
             pickerLabel1.textAlignment = NSTextAlignment.center
             return pickerLabel1
+        } else {
+            let pickerLabel2 = UILabel()
+            pickerLabel2.text = game.years1[row]
+            pickerLabel2.textAlignment = NSTextAlignment.right
+            return pickerLabel2
         }
     }
     
@@ -56,7 +63,8 @@ class EnterBirthdayViewController: UIViewController, UIPickerViewDelegate, UIPic
         if let helloController = segue.destination as? BirthdayDisplayViewController {
             let monthValue = dayMonthPicker.selectedRow(inComponent: 0) + 1
             let dayValue = dayMonthPicker.selectedRow(inComponent: 1) + 1
-            helloController.birthdayString = game.findDay(month: monthValue, date: dayValue)
+            let yearValue = Int(game.years1[dayMonthPicker.selectedRow(inComponent: 2)])
+            helloController.birthdayString = game.findDay(month: monthValue, date: dayValue, year1: yearValue!)
     }
     }
 

@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         dayNumber.text = "1"
         answerDisplay.text = ""
         zodiacDisplay.text = ""
-        game.play()
+        //game.play()
     }
     
     override func didReceiveMemoryWarning() {
@@ -64,7 +64,7 @@ class ViewController: UIViewController {
         if let monthValue = Int(monthNumber.text!),
             let dayValue = Int(dayNumber.text!),
             let yearValue = Int(yearNumber.text!){
-            answerDisplay.text = game.findDay(month: monthValue, date: dayValue)
+            //answerDisplay.text = game.findDay(month: monthValue, date: dayValue)
         }else{
             let alertController = UIAlertController(title: "Invalid Input!", message:
                 "Please enter a valid year!", preferredStyle: UIAlertControllerStyle.alert)
