@@ -103,16 +103,17 @@ class Game {
         let septemberDays = 30
         let octoberDays = 31
         let novemberDays = 30
+        let date = date - 1
         //let month = getMonth()
         //let date = getDate()
         if (month == referenceMonth && date == referenceDate){
-            return 0
+            return difference % 7
         }else if (month == referenceMonth && date < 7) {
             return 7 - (date-1)
         }else if (month == referenceMonth && date > 7) {
             return (date - 1) % 7
         }else if (month == 2){
-            return ((januaryDays) + (date))%7
+            return ((januaryDays) + difference + (date))%7
         }else if (month == 3){
             return (((januaryDays + februaryDays) + difference) + (date))%7
         }else if (month == 4){
@@ -141,8 +142,14 @@ class Game {
         let input = compareDates(month: month, date: date, difference: difference)
         let leap = findLeapYear(year1: year1)
         let aList = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-        let value = aList[input + leap]
-        return value
+        var index = input + leap
+        if index > 6 {
+            index = index - 7
+            return aList[index]
+        } else {
+            let value = aList[index]
+            return value
+        }
     }
     
     func compareZodiac(year:Int) -> Int {
