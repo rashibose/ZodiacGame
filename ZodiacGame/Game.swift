@@ -89,7 +89,7 @@ class Game {
         return difference
     }
     
-    func compareDates(month:Int,date:Int, difference: Int) -> Int {
+    func compareDates(month:Int,date:Int, difference: Int, leap: Int) -> Int {
         let referenceDate = 1
         let referenceMonth = 1
         let januaryDays = 31
@@ -103,53 +103,54 @@ class Game {
         let septemberDays = 30
         let octoberDays = 31
         let novemberDays = 30
-        let date = date - 1
+        let date = (date - 1)
         //let month = getMonth()
         //let date = getDate()
-        if (month == referenceMonth && date == referenceDate){
-            return difference % 7
-        }else if (month == referenceMonth && date < 7) {
-            return 7 - (date-1)
-        }else if (month == referenceMonth && date > 7) {
-            return (date - 1) % 7
+        if (month == referenceMonth && date == 0 && difference < 2557){
+            return (difference) % 7
+        }else if (month == referenceMonth && date == 0 && difference > 2557){
+            return (difference + leap) % 7
+        }else if (month == referenceMonth) {
+            return (date + difference + leap) % 7
         }else if (month == 2){
             return ((januaryDays) + difference + (date))%7
         }else if (month == 3){
-            return (((januaryDays + februaryDays) + difference) + (date))%7
+            return (((januaryDays + februaryDays) + difference + leap) + (date))%7
         }else if (month == 4){
-            return (((januaryDays + februaryDays + marchDays) + difference) + (date))%7
+            return (((januaryDays + februaryDays + marchDays) + difference + leap) + (date))%7
         }else if (month == 5){
-            return (((januaryDays + februaryDays + marchDays + aprilDays)+difference) + (date))%7
+            return (((januaryDays + februaryDays + marchDays + aprilDays + leap)+difference) + (date))%7
         }else if (month == 6){
-            return (((januaryDays + februaryDays + marchDays + aprilDays + mayDays) + difference) + (date))%7
+            return (((januaryDays + februaryDays + marchDays + aprilDays + mayDays) + difference + leap) + (date))%7
         }else if (month == 7){
-            return (((januaryDays + februaryDays + marchDays + aprilDays + mayDays + juneDays) + difference) + (date))%7
+            return (((januaryDays + februaryDays + marchDays + aprilDays + mayDays + juneDays) + difference + leap) + (date))%7
         }else if (month == 8){
-            return (((januaryDays + februaryDays + marchDays + aprilDays + mayDays + juneDays + julyDays) + difference) + (date))%7
+            return (((januaryDays + februaryDays + marchDays + aprilDays + mayDays + juneDays + julyDays) + difference + leap) + (date))%7
         }else if (month == 9){
-            return (((januaryDays + februaryDays + marchDays + aprilDays + mayDays + juneDays + julyDays + augustDays) + difference) + (date))%7
+            return (((januaryDays + februaryDays + marchDays + aprilDays + mayDays + juneDays + julyDays + augustDays) + difference + leap) + (date))%7
         }else if (month == 10){
-            return (((januaryDays + februaryDays + marchDays + aprilDays + mayDays + juneDays + julyDays + augustDays + septemberDays) + difference) + (date))%7
+            return (((januaryDays + februaryDays + marchDays + aprilDays + mayDays + juneDays + julyDays + augustDays + septemberDays + leap) + difference) + (date))%7
         }else if (month == 11){
-            return (((januaryDays + februaryDays + marchDays + aprilDays + mayDays + juneDays + julyDays + augustDays + septemberDays + octoberDays) + difference) + (date))%7
+            return (((januaryDays + februaryDays + marchDays + aprilDays + mayDays + juneDays + julyDays + augustDays + septemberDays + octoberDays) + difference + leap) + (date))%7
         }else {//if (month == 12)
-            return (((januaryDays + februaryDays + marchDays + aprilDays + mayDays + juneDays + julyDays + augustDays + septemberDays + octoberDays + novemberDays) + difference) + (date))%7
+            return (((januaryDays + februaryDays + marchDays + aprilDays + mayDays + juneDays + julyDays + augustDays + septemberDays + octoberDays + novemberDays) + difference + leap) + (date))%7
         }
     }
     
     func findDay(month:Int,date:Int, year1: Int) -> String {
         let difference = differenceInYears(year1: year1)
-        let input = compareDates(month: month, date: date, difference: difference)
         let leap = findLeapYear(year1: year1)
+        let input = compareDates(month: month, date: date, difference: difference, leap: leap)
         let aList = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-        var index = input + leap
-        if index > 6 {
-            index = index - 7
-            return aList[index]
-        } else {
-            let value = aList[index]
-            return value
-        }
+        return aList[input]
+        //var index = input + leap
+        //if index > 6 {
+            //index = index - 7
+            //return aList[index]
+        //} else {
+            //let value = aList[index]
+            //return value
+        //}
     }
     
     func compareZodiac(year:Int) -> Int {
