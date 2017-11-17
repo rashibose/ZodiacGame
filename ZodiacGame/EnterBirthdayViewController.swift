@@ -15,6 +15,7 @@ class EnterBirthdayViewController: UIViewController, UIPickerViewDelegate, UIPic
         super.viewDidLoad()
         dayMonthPicker.delegate = self
         dayMonthPicker.dataSource = self
+        
         // Do any additional setup after loading the view.
     }
 
@@ -64,7 +65,56 @@ class EnterBirthdayViewController: UIViewController, UIPickerViewDelegate, UIPic
             let monthValue = dayMonthPicker.selectedRow(inComponent: 0) + 1
             let dayValue = dayMonthPicker.selectedRow(inComponent: 1) + 1
             let yearValue = Int(game.years1[dayMonthPicker.selectedRow(inComponent: 2)])
-            helloController.birthdayString = game.findDay(month: monthValue, date: dayValue, year1: yearValue!)
+            let leapTest = yearValue!/4
+            let value : String = String(describing: yearValue!)
+            
+            if (monthValue == 2 && dayValue == 31){
+                let alertController = UIAlertController(title: "Invalid Input!", message:
+                    "February doesn't have 31 days.", preferredStyle: UIAlertControllerStyle.alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+                self.present(alertController, animated: true, completion: nil)
+                
+            } else if (monthValue == 2 && dayValue == 30){
+                let alertController = UIAlertController(title: "Invalid Input!", message:
+                    "February doesn't have 30 days.", preferredStyle: UIAlertControllerStyle.alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+                self.present(alertController, animated: true, completion: nil)
+                
+            } else if (monthValue == 2 && dayValue == 29 && leapTest != 0) {
+                let alertController = UIAlertController(title: "Invalid Input!", message:
+                    "February only has 29 days when it is a leap year. The year you have entered is not a leap year.", preferredStyle: UIAlertControllerStyle.alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+                self.present(alertController, animated: true, completion: nil)
+                
+            } else if (monthValue == 4 && dayValue == 31) {
+                let alertController = UIAlertController(title: "Invalid Input!", message:
+                    "April only has 30 days.", preferredStyle: UIAlertControllerStyle.alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+                self.present(alertController, animated: true, completion: nil)
+                
+            }else if (monthValue == 6 && dayValue == 31) {
+                let alertController = UIAlertController(title: "Invalid Input!", message:
+                    "June only has 30 days.", preferredStyle: UIAlertControllerStyle.alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+                self.present(alertController, animated: true, completion: nil)
+                
+            } else if (monthValue == 9 && dayValue == 31) {
+                let alertController = UIAlertController(title: "Invalid Input!", message:
+                    "September only has 30 days.", preferredStyle: UIAlertControllerStyle.alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+                self.present(alertController, animated: true, completion: nil)
+                
+            } else if (monthValue == 11 && dayValue == 31) {
+                let alertController = UIAlertController(title: "Invalid Input!", message:
+                    "November only has 31 days.", preferredStyle: UIAlertControllerStyle.alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+                self.present(alertController, animated: true, completion: nil)
+                
+            }else {
+                helloController.birthdayString = game.findDay(month: monthValue, date: dayValue, year1: yearValue!)
+                helloController.birthdayHeading = "Your birthday in " + value + " will be on:"
+            }
+            
     }
     }
 
