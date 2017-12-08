@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hVj-Ag-vup">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hVj-Ag-vup">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -48,7 +48,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.7048648367" green="0.88651635360000003" blue="0.7868404604" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.76985883919999998" green="1" blue="0.94827238790000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="vTh-UV-vFq" firstAttribute="centerX" secondItem="dN0-it-W7D" secondAttribute="centerX" id="9uo-Xf-Y5o"/>
                             <constraint firstItem="eQ3-TJ-guM" firstAttribute="top" secondItem="pYj-ou-6ow" secondAttribute="bottom" constant="24" id="Fkp-sv-562"/>
@@ -61,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pen-EE-Tzm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-783" y="136"/>
+            <point key="canvasLocation" x="-722" y="-344"/>
         </scene>
         <!--Enter Birthday View Controller-->
         <scene sceneID="gzc-c8-mtW">
@@ -111,7 +111,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.76985883919999998" green="1" blue="0.94827238790000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.72729576882790159" green="1" blue="0.95003580815375133" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Hvm-4S-mPW" firstAttribute="top" secondItem="cSM-79-KR5" secondAttribute="bottom" constant="28" id="9DV-nN-jb4"/>
                             <constraint firstItem="Lel-om-ZxV" firstAttribute="centerX" secondItem="mec-I2-j0C" secondAttribute="centerX" id="NBe-pf-nIt"/>
@@ -127,7 +127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fhZ-RM-faK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-783.20000000000005" y="-528.48575712143929"/>
+            <point key="canvasLocation" x="-722" y="-1038"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Zhv-NY-2Bd">
@@ -141,11 +141,54 @@
                     <connections>
                         <segue destination="hn8-CS-HUx" kind="relationship" relationship="viewControllers" id="2Ao-Dc-Bem"/>
                         <segue destination="0nV-yt-oCb" kind="relationship" relationship="viewControllers" id="qJ5-BD-7iM"/>
+                        <segue destination="dO5-yb-55U" kind="relationship" relationship="viewControllers" id="ddg-0B-2JM"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8yg-SH-XNn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3106" y="-184"/>
+            <point key="canvasLocation" x="-3094" y="-269"/>
+        </scene>
+        <!--Attributes-->
+        <scene sceneID="0rP-8v-3pC">
+            <objects>
+                <viewController id="dO5-yb-55U" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rhr-kE-5I7"/>
+                        <viewControllerLayoutGuide type="bottom" id="MWn-YF-aN8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2VF-OW-RKf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lue-ck-0Wv">
+                                <rect key="frame" x="55" y="313" width="263.5" height="41"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icons 8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86g-jf-ujA">
+                                        <rect key="frame" x="0.0" y="0.0" width="263.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Link to Icons 8: https://icons8.com" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uuX-4L-sVn">
+                                        <rect key="frame" x="0.0" y="20.5" width="263.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.76985883919999998" green="1" blue="0.94827238790000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lue-ck-0Wv" firstAttribute="centerY" secondItem="2VF-OW-RKf" secondAttribute="centerY" id="VRK-M9-Srk"/>
+                            <constraint firstItem="lue-ck-0Wv" firstAttribute="centerX" secondItem="2VF-OW-RKf" secondAttribute="centerX" id="pSx-cW-rXe"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Attributes" image="icons8-about-26" id="NIj-qt-uXQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VuN-xr-q1O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1788" y="314.39280359820094"/>
         </scene>
         <!--Birthday Display View Controller-->
         <scene sceneID="mqQ-Pu-ru7">
@@ -177,7 +220,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.76985883919999998" green="1" blue="0.94827238790000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.72729576880000002" green="1" blue="0.9500358082" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="oUb-Jo-LNH" firstAttribute="top" secondItem="bUz-G8-Vfh" secondAttribute="bottom" constant="22" id="1O3-Dl-YNQ"/>
                             <constraint firstItem="MUK-AR-mFa" firstAttribute="centerX" secondItem="osi-mR-vfX" secondAttribute="centerX" id="6Uz-L0-8cq"/>
@@ -190,7 +233,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xzw-rA-3I2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="128.80000000000001" y="-528.48575712143929"/>
+            <point key="canvasLocation" x="257" y="-1039"/>
         </scene>
         <!--Zodiac Display View Controller-->
         <scene sceneID="lvw-tk-iRu">
@@ -222,7 +265,8 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.7048648367" green="0.88651635360000003" blue="0.7868404604" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.76985883919999998" green="1" blue="0.94827238790000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.25845354671365162" green="0.42413770353608959" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Ucz-K6-BUe" firstAttribute="centerX" secondItem="gSo-ze-ov2" secondAttribute="centerX" id="Geu-8k-sKz"/>
                             <constraint firstItem="PdF-nb-Xof" firstAttribute="top" secondItem="oZq-Vw-7ve" secondAttribute="bottom" constant="17" id="twm-xA-ryW"/>
@@ -234,7 +278,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7DU-jA-wwo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="128.80000000000001" y="134.48275862068968"/>
+            <point key="canvasLocation" x="257" y="-344"/>
         </scene>
         <!--Day of the Week-->
         <scene sceneID="m2k-nq-yGd">
@@ -255,7 +299,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YTX-7f-C5u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1788" y="-528"/>
+            <point key="canvasLocation" x="-1788" y="-1037"/>
         </scene>
         <!--Chinese Zodiac-->
         <scene sceneID="yWc-py-yiE">
@@ -277,11 +321,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ke-3c-aRT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1788" y="136"/>
+            <point key="canvasLocation" x="-1788" y="-344"/>
         </scene>
     </scenes>
     <resources>
         <image name="Image" width="26" height="26"/>
         <image name="Zodiac Icon" width="48" height="48"/>
+        <image name="icons8-about-26" width="26" height="26"/>
     </resources>
 </document>
