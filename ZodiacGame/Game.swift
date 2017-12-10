@@ -90,7 +90,6 @@ class Game {
     }
     
     func compareDates(month:Int,date:Int, difference: Int, leap: Int) -> Int {
-        let referenceDate = 1
         let referenceMonth = 1
         let januaryDays = 31
         let februaryDays = 28
